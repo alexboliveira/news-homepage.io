@@ -69,8 +69,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: calc(var(--font)* 2);
+    
 }
+
+
+#iconMenu{display: none;}
+
+
+
+
 header ul{
     display: flex;
     gap: calc(var(--font) * 3.5);
@@ -81,6 +88,19 @@ header ul > li{
     color: var(--blue2);
     font-size: calc(var(--font) * 1.2);
     font-weight: 700;
+}
+
+header nav > img{
+    display: none;
+}
+
+header > h1{
+    padding: calc(var(--font) * 2);
+}
+
+header nav ul li:hover{
+    color: var(--orange);
+    cursor: pointer;
 }
 
 
@@ -109,6 +129,12 @@ section.txt > button{
     letter-spacing: calc(var(--font) * 0.5);
 }
 
+section.txt > button:hover{
+    background-color: var(--darkblue);
+    color: var(--white);
+    cursor: pointer;
+}
+
 
 
 section.image{
@@ -120,9 +146,9 @@ section.image{
 }
 
 
-section.nav{
-    
-    
+section.nav p:nth-of-type(1):hover{
+    color: var(--orange);
+    cursor: pointer;
 }
 
 section.nav h3{
@@ -208,6 +234,11 @@ footer ul li > div p:nth-of-type(2){
 
 }
 
+footer ul li > div:nth-of-type(2) p:nth-of-type(1):hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+
 
 
 
@@ -229,21 +260,55 @@ footer ul li > div p:nth-of-type(2){
         padding: var(--font);
     
     }
+
+    #iconMenu{display: unset;} 
     footer ul{
         flex-direction: column !important;
         
     
     }
-    footer ul li{
+    footer {
+        padding-top: calc(var(--font) *4);
+        padding-bottom: calc(var(--font) *4);
+        
         
     }
-    footer ul li > div{
-        
-    }
+   
+
+   
+
+    
 
     header nav{
         display: none;
+        flex-direction:column;
+        justify-content: right;
+        align-items:end;
+        position: fixed;
+        right: 0;
+        top:0;
+        height: 100vh;
+        background-color: var(--white);
+        box-shadow: 1px 1px 1rem 1px var(--blue2);
+        width: 30vh;
         
+        
+    }
+    header nav >img{
+        padding: calc(var(--font) * 2);
+        width: 30px;
+        display: unset;
+        
+    }
+    
+
+
+    header nav ul{
+        width: calc(100% - (var(--font) * 4));
+        margin-top: calc(var(--font) * 1);
+        flex-direction: column;
+        padding: calc(var(--font) * 2);
+        gap: calc(var(--font) * 2);
     }
 
 
@@ -259,6 +324,31 @@ footer ul li > div p:nth-of-type(2){
     section.nav{
         margin-top: calc(var(--font) * 4);
     }
+
+    footer ul{
+        gap: var(--font);
+    }
+
+    footer ul li{
+        gap: calc(var(--font) * 2);
+        
+    }
+
+    footer ul li > div{
+        padding: calc(var(--font) *0);
+
+
+    }
+
+    footer ul li > div > span{
+        font-size: calc(var(--font) * 2);
+
+    }
+
+    footer ul li > div p:nth-of-type(2){
+        margin-top: calc(var(--font) * 0);
+        line-height: calc(var(--font) * 1.2);
+        color: var(--blue2);
 
 
    
