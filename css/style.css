@@ -51,6 +51,7 @@ main{
     background-color: transparent;
     height: auto;
     width: 1440px;
+    margin-bottom: calc(var(--font) * 8);
 
 }
 body{
